@@ -1,0 +1,49 @@
+@media (max-width: 1199.98px) {
+  .navbar { min-height: 76px; }
+  .nav-toggle { display: block; }
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 20px 24px 24px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: rgba(248, 247, 242, 0.99);
+    box-shadow: 0 16px 24px rgba(20, 20, 20, 0.08);
+  }
+  .nav-links { gap: 0; margin: 0 0 17px !important; }
+  .nav-links .nav-link { display: inline-block; padding: 11px 0 !important; font-size: 16px; }
+  .quote-button { width: 100%; min-height: 49px; margin: 0; font-size: 13px; }
+
+  .site-header { padding-top: 24px; }
+  .navbar { flex: 1 1 auto; min-height: 58px; border-radius: 24px; }
+  .header-row { width: min(100% - 48px, 1440px) !important; }
+  .nav-toggle { border-color: rgba(255,255,255,.7); }
+  .nav-toggle span { background: #fff; }
+  .navbar-collapse { padding: 17px 24px 22px; border-color: rgba(255,255,255,.14); background: #3b3b3b; box-shadow: 0 16px 24px rgba(0,0,0,.2); }
+  .nav-links .nav-link { color: #c4c4c5; }
+  .quote-button { grid-column: 1 / -1; min-height: 43px; }
+  body.dark-mode .nav-toggle { border-color: rgba(16,17,19,.5); }
+  body.dark-mode .nav-toggle span { background: #101113; }
+  body.dark-mode .navbar-collapse { border-color: rgba(255,255,255,.14); background: #3b3b3b; }
+}
+
+@media (max-width: 575.98px) {
+  .site-container { width: min(100% - 32px, 1440px); }
+  .navbar { min-height: 68px; }
+  .brand-mark { width: 30px; height: 30px; }
+  .brand-copy strong { font-size: 13px; }
+  .brand-copy span { font-size: 8px; }
+  .nav-toggle { width: 40px; height: 40px; padding: 8px; }
+  .navbar-collapse { padding: 16px; }
+  .site-header { padding-top: 16px; }
+  .header-row { width: min(100% - 32px, 1440px) !important; }
+  .brand-copy { display: none; }
+}
+
+@media (max-width: 767.98px) {
+  .header-row { flex-wrap: wrap; gap: 8px; }
+  .navbar { flex-basis: 100%; order: 1; }
+  .utility-tray { order: 2; margin-left: auto; }
+}
