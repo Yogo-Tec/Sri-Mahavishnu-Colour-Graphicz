@@ -1,0 +1,243 @@
+/* =============================================================
+   RESPONSIVE BREAKPOINTS
+   Mobile   : max-width 575px
+   Tablet   : 576px – 991px
+   Laptop   : 992px – 1439px
+   Desktop  : 1440px+
+   ============================================================= */
+
+/* ─────────────────────────────────────────────────────────────
+   SHARED ADJUSTMENTS (≤ 1199px)
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 1199.98px) {
+
+  /* Navbar */
+  .navbar { min-height: 76px; }
+  .nav-toggle { display: block; }
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 20px 24px 24px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: rgba(248, 247, 242, 0.99);
+    box-shadow: 0 16px 24px rgba(20, 20, 20, 0.08);
+  }
+  .nav-links { gap: 0; margin: 0 0 17px !important; }
+  .nav-links .nav-link { display: inline-block; padding: 11px 0 !important; font-size: 16px; }
+  .quote-button { width: 100%; min-height: 49px; margin: 0; font-size: 13px; }
+
+  /* Capsule nav */
+  .site-header { padding-top: 24px; }
+  .navbar { flex: 1 1 auto; min-height: 58px; border-radius: 24px; background: #3b3b3b; }
+  .header-row { width: min(100% - 48px, 1440px) !important; }
+  .nav-toggle { border-color: rgba(255,255,255,.7); }
+  .nav-toggle span { background: #fff; }
+  .navbar-collapse {
+    padding: 17px 24px 22px;
+    border-color: rgba(255,255,255,.14);
+    background: #3b3b3b;
+    box-shadow: 0 16px 24px rgba(0,0,0,.2);
+    border-radius: 0 0 24px 24px;
+  }
+  .nav-links .nav-link { color: #c4c4c5; }
+  .quote-button { grid-column: 1 / -1; min-height: 43px; }
+
+  body.dark-mode .nav-toggle { border-color: rgba(255,255,255,.3); }
+  body.dark-mode .nav-toggle span { background: #fff; }
+  body.dark-mode .navbar-collapse { border-color: rgba(255,255,255,.14); background: #2a2b2e; }
+
+  /* Process section: disable horizontal sticky scroll on smaller screens, go vertical */
+  .horizontal-process-section { height: auto; }
+  .process-sticky-wrapper {
+    position: relative;
+    height: auto;
+    overflow: visible;
+    padding: clamp(60px, 8vw, 100px) 0;
+  }
+  .process-track-viewport { overflow-x: auto; padding: 30px 0 20px; }
+  .process-track { padding-left: 24px; padding-right: 24px; }
+  .process-track-viewport::-webkit-scrollbar { height: 4px; }
+  .process-track-viewport::-webkit-scrollbar-thumb { background: rgba(27,28,31,.2); border-radius: 999px; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TABLET (576px – 991px)
+   ───────────────────────────────────────────────────────────── */
+@media (min-width: 576px) and (max-width: 991.98px) {
+
+  /* Layout container */
+  .site-container { width: min(100% - 40px, 100%); }
+
+  /* Hero deck */
+  .hero-deck { padding-top: clamp(55px, 8vw, 90px); padding-bottom: clamp(36px, 5vw, 60px); }
+  .hero-deck-intro h1 { font-size: clamp(42px, 7vw, 68px); }
+  .deck-viewport { min-height: 265px; margin-top: 24px; }
+  .deck-stage { height: 258px; }
+  .deck-card { top: 30px; width: 155px; height: 215px; }
+  .hero-actions { gap: 14px; }
+
+  /* Who we are */
+  .who-grid { grid-template-columns: 1fr; }
+  .who-main-card { min-height: 380px; }
+  .who-stats-row { grid-template-columns: repeat(2, 1fr); }
+
+  /* Clients marquee */
+  .client-logo-card { width: 180px; height: 90px; }
+  .client-logo-img { width: 130px; height: 65px; }
+
+  /* Scroll stack */
+  .stack-card { height: clamp(380px, 52vh, 480px); }
+  .stack-card-name { font-size: clamp(26px, 4vw, 44px); }
+
+  /* Services */
+  .service-mouse-preview { display: none; }
+  .service-name { font-size: clamp(26px, 4.5vw, 56px); }
+
+  /* Process */
+  .process-card { width: clamp(240px, 30vw, 310px); }
+  .process-promise-card { width: clamp(240px, 30vw, 310px); }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MOBILE (≤ 575px)
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 575.98px) {
+
+  /* Container */
+  .site-container { width: min(100% - 32px, 100%); }
+  .header-row { width: min(100% - 32px, 1440px) !important; }
+
+  /* Brand */
+  .brand-mark { width: 30px; height: 30px; }
+  .brand-copy strong { font-size: 12px; }
+  .brand-copy span { font-size: 7px; }
+  .brand-copy { display: grid; }
+
+  /* Navbar */
+  .navbar { flex: 1 1 auto; min-height: 50px; border-radius: 20px; }
+  .nav-toggle { width: 38px; height: 38px; padding: 8px; }
+  .navbar-collapse { padding: 14px 16px 18px; border-radius: 0 0 20px 20px; }
+  .site-header { padding-top: 14px; }
+  .utility-tray { gap: 8px; }
+  .flip-clock { display: none; }
+  .theme-toggle { width: 34px; height: 34px; font-size: 13px; }
+
+  /* Hero deck */
+  .hero-deck { padding-top: 48px; padding-bottom: 28px; }
+  .hero-deck-intro h1 { font-size: clamp(34px, 10vw, 54px); letter-spacing: -0.05em; }
+  .hero-deck-intro p.hero-subtitle { font-size: 13px; margin-top: 12px; }
+  .hero-kicker { font-size: 10px; padding: 5px 12px; margin-bottom: 10px; }
+  .deck-viewport { min-height: 210px; margin-top: 18px; }
+  .deck-stage { height: 205px; }
+  .deck-card { top: 10px; width: 115px; height: 162px; border-radius: 14px; }
+  .card-img-frame, .card-hero-img { border-radius: 14px; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; margin-top: 16px; }
+  .btn-hero-primary, .btn-hero-secondary { justify-content: center; font-size: 12px; }
+  .btn-hero-primary { padding: 12px 20px; }
+  .deck-dots { padding: 6px 14px; gap: 10px; }
+  .deck-dot { width: 9px; height: 9px; }
+  .deck-footer { gap: 12px; }
+
+  /* Who We Are */
+  .who-we-are-section { padding: clamp(50px, 8vw, 80px) 0; }
+  .who-header-title { font-size: clamp(26px, 6.5vw, 40px); }
+  .who-kicker-tag { font-size: 12px; }
+  .who-grid { grid-template-columns: 1fr; gap: 20px; }
+  .who-main-card { min-height: 280px; border-radius: 24px; }
+  .who-badge-rotating { width: 86px; height: 86px; bottom: 16px; left: 16px; }
+  .who-badge-icon { width: 34px; height: 34px; font-size: 15px; }
+  .who-story-card { border-radius: 24px; padding: 22px 20px; }
+  .who-story-header-box { font-size: 14px; padding: 8px 16px; }
+  .who-story-text { font-size: 14px; }
+  .who-sec-card { height: 180px; border-radius: 24px; }
+  .who-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: clamp(32px, 5vw, 48px);
+    padding-top: 20px;
+  }
+  .who-stat-val { font-size: clamp(32px, 8vw, 50px); }
+  .who-stat-lbl { font-size: 11px; margin-top: 6px; }
+
+  /* Clients Marquee */
+  .clients-marquee-section { padding: clamp(48px, 7vw, 72px) 0; }
+  .clients-title { font-size: clamp(22px, 6vw, 36px); }
+  .clients-desc { font-size: 13px; }
+  .client-logo-card { width: 150px; height: 76px; padding: 10px 14px; border-radius: 18px; }
+  .client-logo-img { width: 110px; height: 55px; }
+
+  /* Scroll Stack */
+  .scroll-stack-section { padding: clamp(50px, 8vw, 80px) 0 clamp(70px, 10vw, 100px); }
+  .scroll-stack-title { font-size: clamp(22px, 6.5vw, 38px); }
+  .scroll-stack-desc { font-size: 13px; }
+  .stack-card { height: clamp(280px, 55vw, 380px); border-radius: 22px; }
+  .stack-card-name { font-size: clamp(20px, 5.5vw, 34px); }
+  .stack-card-tag { font-size: 11px; padding: 6px 14px; }
+  .stack-card-sub { font-size: 12px; }
+  .stack-card-header { top: clamp(16px, 3vw, 24px); left: clamp(16px, 3vw, 24px); gap: 8px; }
+  .stack-card-bottom { bottom: clamp(16px, 3vw, 22px); left: clamp(16px, 3vw, 22px); right: clamp(16px, 3vw, 22px); }
+
+  /* Services */
+  .services-interactive-section { padding: clamp(50px, 8vw, 80px) 0; }
+  .services-main-title { font-size: clamp(24px, 6.5vw, 44px); }
+  .service-mouse-preview { display: none; }
+  .service-name { font-size: clamp(20px, 5.5vw, 40px); }
+  .service-num { font-size: 14px; }
+  .service-sub { font-size: 11px; }
+  .service-btn-plus { width: 40px; height: 40px; font-size: 18px; }
+  .service-row { padding: clamp(16px, 3vw, 24px) 0; }
+  .service-left { gap: 10px; }
+
+  /* Process */
+  .process-sticky-wrapper { padding: clamp(50px, 8vw, 80px) 0; }
+  .process-title { font-size: clamp(20px, 5.5vw, 34px); }
+  .process-kicker { font-size: 11px; }
+  .process-card { width: 240px; padding: 20px; border-radius: 20px; }
+  .process-promise-card { width: 240px; padding: 22px 18px; border-radius: 20px; }
+  .process-card-title { font-size: 18px; }
+  .process-card-text { font-size: 13px; }
+  .process-card-icon { width: 40px; height: 40px; font-size: 18px; border-radius: 12px; }
+  .process-connecting-line { display: none; }
+  .process-promise-title { font-size: 18px; }
+  .process-promise-text { font-size: 13px; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MOBILE layout helpers (≤ 767px)
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 767.98px) {
+  .header-row { flex-wrap: wrap; gap: 8px; }
+  .navbar { flex-basis: 100%; order: 1; }
+  .utility-tray { order: 2; margin-left: auto; }
+
+  /* Make sure nav toggle uses our custom style */
+  .navbar-toggler { display: none; }
+  .nav-toggle { display: block; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LAPTOP (992px – 1439px)
+   ───────────────────────────────────────────────────────────── */
+@media (min-width: 992px) and (max-width: 1439.98px) {
+  .site-container { width: min(100% - 56px, 1200px); }
+  .hero-deck-intro h1 { font-size: clamp(46px, 5.5vw, 76px); }
+  .who-grid { grid-template-columns: 1.2fr 0.8fr; }
+  .deck-card { width: 190px; height: 268px; }
+  .deck-stage { height: 310px; }
+  .process-card { width: clamp(270px, 24vw, 320px); }
+  .process-promise-card { width: clamp(270px, 24vw, 320px); }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   DESKTOP (≥ 1440px)
+   ───────────────────────────────────────────────────────────── */
+@media (min-width: 1440px) {
+  .site-container { max-width: 1440px; width: min(100% - 64px, 1440px); }
+  .navbar { width: min(100%, 880px); }
+  .hero-deck-intro h1 { font-size: clamp(62px, 5.5vw, 88px); }
+  .deck-card { width: 228px; height: 320px; }
+  .deck-stage { height: 356px; }
+}
